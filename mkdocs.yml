@@ -1,0 +1,90 @@
+## Project information
+site_name: BK77
+site_url: https://bk77.dk/
+site_description: BK77 - Badminton i hjertet af Odense
+
+## Social Media
+extra:
+  social:
+    - icon: fontawesome/solid/house
+      link: https://bk77.dk
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/odensebk77/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/Badmintonklubben1977/
+
+## Page tree
+nav:
+  - Hjem: index.md
+  - Ungdom: ungdom.md
+  - Senior: senior.md
+  - Motionist: motionist.md
+  - Om Klubben: om-klubben.md
+  - Kontakt: kontakt.md
+
+## Configuration
+theme:
+  name: material
+  custom_dir: docs/theme_override_home/
+  static_templates:
+    - 404.html
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:  # from .icons path. Add to theme override for custom logo.
+    logo: shuttle  # top left header logo
+  favicon: assets/shuttle.ico #browser tab logo
+
+## Plugins
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+## Extensions
+# markdown_extensions:
+#   - markdown.extensions.admonition
+#   - markdown.extensions.attr_list
+#   - markdown.extensions.md_in_html
+#   - markdown.extensions.def_list
+#   - markdown.extensions.footnotes
+#   - markdown.extensions.meta
+#   - markdown.extensions.toc:
+#       baselevel: 1
+#       permalink: true
+#   - pymdownx.arithmatex
+#   - pymdownx.betterem:
+#       smart_enable: all
+#   - pymdownx.caret
+#   - pymdownx.critic
+#   - pymdownx.details
+#   - pymdownx.emoji
+#   - pymdownx.highlight
+#   - pymdownx.inlinehilite
+#   - pymdownx.keys
+#   - pymdownx.magiclink:
+#   - pymdownx.mark
+#   - pymdownx.smartsymbols
+#   - pymdownx.snippets:
+#       check_paths: true
+#   - pymdownx.superfences
+#   - pymdownx.tabbed:
+#       alternate_style: true
+#   - pymdownx.tasklist:
+#       custom_checkbox: true
+#   - pymdownx.tilde
