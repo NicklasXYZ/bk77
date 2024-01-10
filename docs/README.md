@@ -1,39 +1,11 @@
-# up42-py docs
+# bk77
 
-Live on github pages:
-[https://up42.github.io/up42-py/](https://up42.github.io/up42-py/)
+The website deploys to [bk77.dk](bk77.dk) and [https://nicklasxyz.github.io/bk77/](https://nicklasxyz.github.io/bk77/) for testing.
 
-Redirected to custom domain [https://sdk.up42.com/](https://sdk.up42.com/)
+# build & deploy
 
-## Installation for doc development:
-```
-cd docs
-poetry install --only docs
-```
+Build and deploy using:
 
-## HTML Preview
-Directly integrated in mkdocs, automatically reloads when you edit a file.
+```bash
+mkdocs build && scp -r site/* {username}@{website}:/www
 ```
-make serve
-```
-Access at `http://127.0.0.1:8000/`
-
-## Build site (not really necessary due to preview function):
-```
-mkdocs build
-```
-
-## Update Python API reference preview via mkdocstrings
-Reinstall Python package via
-```
-pip install -e .
-```
-
-## Publish
-```
-make gh-deploy
-```
-Pushes to the `gh-deploy` branch and republishes as github pages.
-
-For more infos see readme here:
-https://github.com/up42/docs_mkdocs
