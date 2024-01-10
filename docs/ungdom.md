@@ -7,4 +7,4 @@ hide:
 
 # Ungdoms afdelingen i BK77
 
-BK77 har desværre ikke ungdomstræning i sæson 22/23.
+BK77 har desværre ikke ungdomstræning i sæson 23/24.
