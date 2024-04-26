@@ -36,6 +36,6 @@ Bestyrelsen kan enten kontaktes på bestyrelsen@bk77.dk, ellers er det muligt at
 | Kasserer          | Nikolaj Christoffersen   | 41 26 37 16 | kasserer@bk77.dk     |
 | Bestyrelsesmedlem | Sif Eriksen              | 61 74 30 28 | motionist@bk77.dk    |
 | Bestyrelsesmedlem | Nicklas Sindlev Andersen | 42 40 02 15 | senior@bk77.dk       |
-| Bestyrelsesmedlem | Katja Petersen           | 28 93 73 04 | ungdom@bk77.dk       |
+| Bestyrelsesmedlem | Katja Petersen           | 28 92 73 04 | ungdom@bk77.dk       |
 
 </center>
