@@ -56,6 +56,12 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
+extra_javascript:
+  - javascripts/leaflet.js
+
+extra_css:
+  - css/leaflet.css
+
 ## Extensions
 # markdown_extensions:
 #   - markdown.extensions.admonition

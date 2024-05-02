@@ -20,6 +20,7 @@
     }
 
     .tx-hero {
+        /* margin: 32px 2.8rem; */
         margin: 32px 2.8rem;
         color: var(--md-primary-bg-color);
         /* justify-content: center; */
@@ -116,8 +117,13 @@
         }
 
         .tx-hero {
-            display: flex;
-            align-items: center;
+            display: flex; */
+            /* align-items: center;
+
+            /* display: grid;
+            grid-auto-flow: column;
+            grid-column-gap: 320px; */
+
             /* justify-content: center; */
         }
 
@@ -575,6 +581,13 @@
     .bg-dark {
         background-color: #181917;
     }
+
+    .leaflet-container {
+        height: 300px;
+        width: 400px;
+        max-width: 100%;
+        max-height: 100%;
+    }
 </style>
 
 
@@ -589,9 +602,11 @@
           <!-- <h1> Velkommen til BK77 </h1> -->
           <p>Badmintonklubben 1977 - Badminton i hjertet af Odense</p>
         </div>
-      </div>
+            <!-- <div id="leaflet-container"></div> -->
     </div>
+</div>
 </section>
+
 
 <!-- Main site box descriptions -->
 <div class="top-hr">
@@ -643,6 +658,8 @@
     <!-- </div> -->
 </div>
 
+
+
 {% endblock %}
 
 {% block content %}{% endblock %}
@@ -660,4 +677,20 @@
     </div>
 </footer>
 
+<script type="text/javascript">
+    // document.addEventListener("DOMContentLoaded", function() {
+    // const location = [55.38676606319269, 10.371695146319285]
+    //   var map = L.map('leaflet-container').setView(location, 16);
+  
+    //   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    //     attribution: '',
+    //     maxZoom: 18,
+    //     id: 'mapbox/satellite-streets-v12',
+    //     tileSize: 512,
+    //     zoomOffset: -1,
+    //     accessToken: 'pk.eyJ1Ijoiem9uZTAiLCJhIjoiY2o5aWw3b2o5M2ppYzJ3cHlpNTVocWUwaiJ9.8xkONvRHgNd5SJaSC2rWRQ'
+    //   }).addTo(map);
+    //   L.CircleMarker([location[0], location[1]], {radius: 10, color: 'FF0000'}).addTo(map);
+    // })
+  </script>
 {% endblock %}
