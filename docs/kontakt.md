@@ -18,8 +18,8 @@ Herunder finder du kontaktinformationer på de udvalgsansvarlige.
 | Udvalg    | Kontaktperson            | Telefon Nr. | Mail              |
 | :-------- | :----------------------- | :---------- | :---------------- |
 | Senior    | Nicklas Sindlev Andersen | 42 40 02 15 | senior@bk77.dk    |
-| Ungdom    | Katja Petersen           | 28 93 73 04 | ungdom@bk77.dk    |
-| Motionist | Sif Eriksen              | 61 74 30 28 | motionist@bk77.dk |
+| Ungdom    | Bestyrrelsen             |             | ungdom@bk77.dk    |
+| Motionist | Katja Petersen           | 28 92 73 04 | motionist@bk77.dk |
 
 </center>
 
@@ -31,11 +31,11 @@ Bestyrelsen kan enten kontaktes på bestyrelsen@bk77.dk, ellers er det muligt at
 
 | Rolle             | Kontaktperson            | Telefon Nr. | Mail                 |
 | :---------------- | :----------------------- | :---------- | :------------------- |
-| Formand           | Rasmus Almlund           | 23 65 26 14 | formand@bk77.dk      |
-| Næstformand       | Benzhi Pan               | 60 11 28 57 | naestformand@bk77.dk |
+| Formand           | Benzhi Pan               | 60 11 28 57 | formand@bk77.dk      |
+| Næstformand       | Andreas Dreddy Skjøde    | 53 64 74 10 | naestformand@bk77.dk |
 | Kasserer          | Nikolaj Christoffersen   | 41 26 37 16 | kasserer@bk77.dk     |
-| Bestyrelsesmedlem | Sif Eriksen              | 61 74 30 28 | motionist@bk77.dk    |
-| Bestyrelsesmedlem | Nicklas Sindlev Andersen | 42 40 02 15 | senior@bk77.dk       |
-| Bestyrelsesmedlem | Katja Petersen           | 28 92 73 04 | ungdom@bk77.dk       |
+| Bestyrelsesmedlem | Nicklas Sindlev Andersen | 42 40 02 15 | bestyrelsen@bk77.dk  |
+| Bestyrelsesmedlem | Oscar Schack Madsen      | 60 46 71 04 | bestyrelsen@bk77.dk  |
+| Bestyrelsesmedlem | Katja Petersen           | 28 92 73 04 | bestyrelsen@bk77.dk  |
 
 </center>
