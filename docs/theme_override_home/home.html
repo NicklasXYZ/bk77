@@ -1,696 +1,454 @@
-<!-- Custom HTML site displayed as the Home chapter -->
+{% extends "main.html" %} {% block extrahead %}
+<meta name="keywords" content="Badminton, Odense, Hunderupskolen" />
+{% endblock %} {% block tabs %} {{ super() }}
 
-{% extends "main.html" %}
-{% block tabs %}
-{{ super() }}
 <style>
+  .md-grid.md-typeset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
-    /* .md-main {
-        flex-grow: 0
-    } */
+  /* Maintain existing styles here */
+  .md-main__inner {
+    display: flex;
+    height: 100%;
+  }
 
-    .md-main__inner {
-        display: flex;
-        height: 100%;
-    }
+  .tx-container {
+    padding-top: 0rem;
+    background: linear-gradient(
+      to bottom,
+      var(--md-primary-fg-color),
+      #181917 99%,
+      #fff 99%
+    );
+  }
 
-    .tx-container {
-        padding-top: .0rem;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), #181917 99%,#fff 99%);
-    }
+  .tx-hero {
+    color: var(--md-primary-bg-color);
+  }
 
-    .tx-hero {
-        /* margin: 32px 2.8rem; */
-        margin: 32px 2.8rem;
-        color: var(--md-primary-bg-color);
-        /* justify-content: center; */
-    }
+  .tx-hero h1 {
+    margin-bottom: 1rem;
+    color: currentColor;
+    font-weight: 700;
+  }
 
+  .tx-hero__content {
+    padding-bottom: 1rem;
+    margin: 0 auto;
+  }
+
+  .tx-hero__image {
+    width: 17rem;
+    order: 1;
+    /* padding-right: 2.5rem; */
+  }
+
+  .tx-hero .md-button {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--md-primary-bg-color);
+  }
+
+  .tx-hero .md-button--primary {
+    background-color: var(--md-primary-bg-color);
+    color: hsla(280deg, 37%, 48%, 1);
+    border-color: var(--md-primary-bg-color);
+  }
+
+  .tx-hero .md-button:focus,
+  .tx-hero .md-button:hover {
+    background-color: var(--md-accent-fg-color);
+    color: var(--md-default-bg-color);
+    border-color: var(--md-accent-fg-color);
+  }
+
+  .feature-item h2 svg {
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+    transform: translateY(10%);
+  }
+
+  .top-hr {
+    margin-top: 32px;
+  }
+
+  .feature-item {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+    padding: 0 15px;
+    word-break: break-word;
+  }
+
+  .feature-item h2 {
+    color: #333;
+    font-weight: 300;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: normal;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+  }
+
+  .feature-item p {
+    font-size: 16px;
+    line-height: 1.8em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #111;
+    margin: 0 0 10px;
+    display: block;
+  }
+
+  @media screen and (max-width: 30em) {
     .tx-hero h1 {
-        margin-bottom: 1rem;
-        color: currentColor;
-        font-weight: 700
+      font-size: 1.4rem;
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+      display: none;
     }
 
     .tx-hero__content {
-        padding-bottom: 1rem;
-        margin: 0 auto;
+      max-width: 22rem;
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+      align-items: center;
     }
+  }
 
-    .tx-hero__image{
-        width:17rem;
-        /* height:17rem; */
-        order:1;
-        padding-right: 2.5rem;
-    }
-
-    .tx-hero .md-button {
-        margin-top: .5rem;
-        margin-right: .5rem;
-        color: var(--md-primary-bg-color)
-    }
-
-    .tx-hero .md-button--primary {
-        background-color: var(--md-primary-bg-color);
-        color: hsla(280deg, 37%, 48%, 1);
-        border-color: var(--md-primary-bg-color)
-    }
-
-    .tx-hero .md-button:focus,
-    .tx-hero .md-button:hover {
-        background-color: var(--md-accent-fg-color);
-        color: var(--md-default-bg-color);
-        border-color: var(--md-accent-fg-color)
-    }
-
-    .feature-item h2 svg {
-        height: 30px;
-        float: left;
-        margin-right: 10px;
-        transform: translateY(10%);
+  @media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+      display: none;
     }
 
     .top-hr {
-        margin-top: 42px;
+      width: 100%;
+      display: flex;
+      max-width: 61rem;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0 0.2rem;
+    }
+
+    .bottom-hr {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      max-width: 61rem;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0 0.2rem;
     }
 
     .feature-item {
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-        box-sizing: border-box;
-        padding: 0 15px;
-        word-break: break-word
-    }
-
-    .feature-item h2 {
-        color: #333;
-        font-weight: 300;
-        font-size: 25px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: normal;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-family: inherit;
-    }
-
-    .feature-item p {
-        font-size: 16px;
-        line-height: 1.8em;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        color: #111;
-        margin: 0 0 10px;
-        display: block;
-    }
-
-    @media screen and (max-width:30em) {
-        .tx-hero h1 {
-            font-size: 1.4rem
-        }
-    }
-
-    @media screen and (min-width:60em) {
-        .md-sidebar--secondary {
-            display: none
-        }
-
-        .tx-hero {
-            display: flex; */
-            /* align-items: center;
-
-            /* display: grid;
-            grid-auto-flow: column;
-            grid-column-gap: 320px; */
-
-            /* justify-content: center; */
-        }
-
-        .tx-hero__content {
-            max-width: 22rem;
-            margin-top: 3.5rem;
-            margin-bottom: 3.5rem;
-            margin-left: 1.0rem;
-            margin-right: 4.0rem;
-            align-items: center;
-        }
-    }
-
-    @media screen and (min-width:76.25em) {
-        .md-sidebar--primary {
-            display: none
-        }
-
-        .top-hr {
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .bottom-hr {
-            margin-top: 10px;
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .feature-item {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .feature-item:hover {
-            background-color: #526cfe47;
-            border-radius: 3px;
-        }
-    }
-
-    .hr {
-        border-bottom: 1px solid #eee;
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .text-center {
-        text-align: center;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 15px;
-        font-family: 'Lato', sans-serif;
-        font-size: 23px;
-        font-weight: 300;
-        padding-bottom: 10px;
-    }
-
-    .logos {
-        display: flex;
-        align-items: center;
-        /* justify-content: center; */
-        flex-flow: row wrap;
-        margin: 0 auto;
-    }
-
-    .logos img {
-        flex: 1 1 auto;
-        padding: 25px;
-        max-height: 130px;
-        vertical-align: middle;
-    }
-
-    .hr-logos {
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-
-    .md-footer-meta__inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 1.0rem;
-    }
-
-    .md-footer-social {
-        padding-top: 20px;
-    }
-
-
-    .d-flex {
-        display: flex;
-    }
-
-    .cursor-pointer {
-        cursor: pointer;
-    }
-
-    .ml-0 {
-        margin-left: 0rem;
-    }
-    .ml-1 {
-        margin-left: 0.25rem;
-    }
-    .ml-2 {
-        margin-left: 0.5rem;
-    }
-    .ml-3 {
-        margin-left: 1rem;
-    }
-    .ml-4 {
-        margin-left: 1.5rem;
-    }
-    .ml-5 {
-        margin-left: 3rem;
-    }
-
-    .mr-0 {
-        margin-right: 0rem;
-    }
-    .mr-1 {
-        margin-right: 0.25rem;
-    }
-    .mr-2 {
-        margin-right: 0.5rem;
-    }
-    .mr-3 {
-        margin-right: 1rem;
-    }
-    .mr-4 {
-        margin-right: 1.5rem;
-    }
-    .mr-5 {
-        margin-right: 3rem;
-    }
-
-    .pl-0 {
-        padding-left: 0rem;
-    }
-    .pl-1 {
-        padding-left: 0.25rem;
-    }
-    .pl-2 {
-        padding-left: 0.5rem;
-    }
-    .pl-3 {
-        padding-left: 1rem;
-    }
-    .pl-4 {
-        padding-left: 1.5rem;
-    }
-    .pl-5 {
-        padding-left: 3rem;
-    }
-
-    .pr-0 {
-        padding-right: 0rem;
-    }
-    .pr-1 {
-        padding-right: 0.25rem;
-    }
-    .pr-2 {
-        padding-right: 0.5rem;
-    }
-    .pr-3 {
-        padding-right: 1rem;
-    }
-    .pr-4 {
-        padding-right: 1.5rem;
-    }
-    .pr-5 {
-        padding-right: 3rem;
-    }
-
-
-    .mt-0 {
-        margin-top: 0rem;
-    }
-    .mt-1 {
-        margin-top: 0.25rem;
-    }
-    .mt-2 {
-        margin-top: 0.5rem;
-    }
-    .mt-3 {
-        margin-top: 1rem;
-    }
-    .mt-4 {
-        margin-top: 1.5rem;
-    }
-    .mt-5 {
-        margin-top: 3rem;
-    }
-
-
-    .pt-0 {
-        padding-top: 0rem;
-    }
-    .pt-1 {
-        padding-top: 0.25rem;
-    }
-    .pt-2 {
-        padding-top: 0.5rem;
-    }
-    .pt-3 {
-        padding-top: 1rem;
-    }
-    .pt-4 {
-        padding-top: 1.5rem;
-    }
-    .pt-5 {
-        padding-top: 3rem;
-    }
-
-    .mb-0 {
-        margin-bottom: 0rem;
-    }
-    .mb-1 {
-        margin-bottom: 0.25rem;
-    }
-    .mb-2 {
-        margin-bottom: 0.5rem;
-    }
-    .mb-3 {
-        margin-bottom: 1rem;
-    }
-    .mb-4 {
-        margin-bottom: 1.5rem;
-    }
-    .mb-5 {
-        margin-bottom: 3rem;
-    }
-
-
-    .pb-0 {
-        padding-bottom: 0rem;
-    }
-    .pb-1 {
-        padding-bottom: 0.25rem;
-    }
-    .pb-2 {
-        padding-bottom: 0.5rem;
-    }
-    .pb-3 {
-        padding-bottom: 1rem;
-    }
-    .pb-4 {
-        padding-bottom: 1.5rem;
-    }
-    .pb-5 {
-        padding-bottom: 3rem;
-    }
-
-
-
-    .mx-0 {
-        margin-left: 0rem;
-        margin-right: 0rem;
-    }
-    .mx-1 {
-        margin-left: 0.25rem;
-        margin-right: 0.25rem;
-    }
-    .mx-2 {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-    }
-    .mx-3 {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    .mx-4 {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-    .mx-5 {
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
-
-    .px-0 {
-        padding-left: 0rem;
-        padding-right: 0rem;
-    }
-    .px-1 {
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
-    }
-    .px-2 {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-    .px-3 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    .px-4 {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-    .px-5 {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-
-
-
-    .my-0 {
-        margin-top: 0rem;
-        margin-bottom: 0rem;
-    }
-    .my-1 {
-        margin-top: 0.25rem;
-        margin-bottom: 0.25rem;
-    }
-    .my-2 {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-    .my-3 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    .my-4 {
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-    .my-5 {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
-
-
-    .py-0 {
-        padding-top: 0rem;
-        padding-bottom: 0rem;
-    }
-    .py-1 {
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
-    }
-    .py-2 {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-    .py-3 {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    .py-4 {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-    .py-5 {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-
-    .mx-auto {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .ml-auto {
-        margin-left: auto;
-    }
-
-    .mr-auto {
-        margin-right: auto;
-    }
-
-    .conteiner {
-        display: flex;
-        flex-flow: column;
-    }
-
-    .conteiner-row {
-        display: flex;
-        flex-flow: row;
-    }
-
-    .display-1 {
-        font-size: 6rem;
-    }
-
-    .display-2 {
-        font-size: 5rem;
-    }
-
-    .display-3 {
-        font-size: 4rem;
-    }
-
-    .display-4 {
-        font-size: 3rem;
-    }
-
-    .h1 {
-        font-size: 2.2rem;
-    }
-
-    .h2 {
-        font-size: 1.5rem;
-    }
-
-    .h3 {
-        font-size: 1rem;
-    }
-
-    .h4 {
-        font-size: 0.5rem;
-    }
-
-    .h5 {
-        font-size: 0.25rem;
-    }
-
-    .t-b {
-        font-weight: bold;
-    }
-
-    .text-pink {
-        color: #d328ae;
-    }
-
-    .text-white {
-        color: #fff;
-    }
-
-    .text-dark {
-        color: #000;
-    }
-
-    .text-align-center {
-        text-align: center;
-    }
-
-    .text-start {
-        text-align: start;
-    }
-
-    .text-end {
-        text-align: end;
-    }
-
-    .bg-dark {
-        background-color: #181917;
-    }
-
-    .leaflet-container {
-        height: 300px;
-        width: 400px;
-        max-width: 100%;
-        max-height: 100%;
-    }
+      flex: 1;
+      min-width: 0;
+    }
+
+    .feature-item:hover {
+      background-color: #526cfe47;
+      border-radius: 3px;
+    }
+  }
+
+  .hr {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .text-center {
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    font-family: "Lato", sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    padding-bottom: 10px;
+  }
+
+  .logos {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 0 auto;
+  }
+
+  .logos img {
+    flex: 1 1 auto;
+    padding: 25px;
+    max-height: 130px;
+    vertical-align: middle;
+  }
+
+  .hr-logos {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .md-footer-meta__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .md-footer-social {
+    padding-top: 20px;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+
+  .mr-auto {
+    margin-right: auto;
+  }
+
+  .conteiner {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .conteiner-row {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .display-1 {
+    font-size: 6rem;
+  }
+
+  .display-2 {
+    font-size: 5rem;
+  }
+
+  .display-3 {
+    font-size: 4rem;
+  }
+
+  .display-4 {
+    font-size: 3rem;
+  }
+
+  .h1 {
+    font-size: 2.2rem;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+  }
+
+  .h3 {
+    font-size: 1rem;
+  }
+
+  .h4 {
+    font-size: 0.5rem;
+  }
+
+  .h5 {
+    font-size: 0.25rem;
+  }
+
+  .t-b {
+    font-weight: bold;
+  }
+
+  .text-pink {
+    color: #d328ae;
+  }
+
+  .text-white {
+    color: #fff;
+  }
+
+  .text-dark {
+    color: #000;
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  .text-start {
+    text-align: start;
+  }
+
+  .text-end {
+    text-align: end;
+  }
+
+  .bg-dark {
+    background-color: #181917;
+  }
+
+  .leaflet-container {
+    height: 350px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -4px;
+  }
+
+  .leaflet-control-attribution.leaflet-control {
+    display: none;
+  }
 </style>
-
 
 <!-- Main site Entry button descriptions -->
 <section class="tx-container">
-    <div class="md-grid md-typeset">
-      <div class="tx-hero">        
-          <div class="tx-hero__content">
-            <div class="tx-hero__image">
-              <img src="assets/bk77v2.svg" width="70%" draggable="false">
-            </div>
-          <!-- <h1> Velkommen til BK77 </h1> -->
-          <p>Badmintonklubben 1977 - Badminton i hjertet af Odense</p>
+  <div class="md-grid md-typeset">
+    <div class="tx-hero">
+      <div class="tx-hero__content">
+        <div class="tx-hero__image">
+          <img src="assets/bk77v2.svg" width="80%" draggable="false" />
+          <p>Badmintonklubben 1977</p>
         </div>
-            <!-- <div id="leaflet-container"></div> -->
+      </div>
     </div>
-</div>
+  </div>
 </section>
 
+<div class="leaflet-container" id="leaflet-container"></div>
 
-<!-- Main site box descriptions -->
 <div class="top-hr">
-    <div class="feature-item">
-        <h2>
-            <img src = "assets/timeline.svg" width="30" height="30" alt="timeline"/>
-            En klub i udvikling
-        </h2>
-        <p>Vi er en klub i konstant udvikling og har stort fokus på det sociale liv og godt kammeratskab, både på og uden for banen.</p>
-    </div>
-    <div class="feature-item">
-        <h2>
-            <img src = "assets/group.svg" width="30" height="30" alt="timeline"/>
-            Badminton for alle
-        </h2>
-        <p>Vi tilbyder badminton for alle, i alle aldre og på alle niveauer. </p>
-    </div>
-    <div class="feature-item">
-        <h2>
-            <img src = "assets/run.svg" width="30" height="30" alt="run"/>
-            Uforpligtende prøvetræning
-        </h2>
-        <p>Du er altid velkommen til at komme til en uforpligtende prøvetræning eller to, bare tag kontakt til den relevante træner og aftal nærmere.</p>
-    </div>
+  <div class="feature-item">
+    <h2>
+      <img src="assets/timeline.svg" width="30" height="30" alt="timeline" />
+      En klub i udvikling
+    </h2>
+    <p>
+      Vi er en klub i konstant udvikling og har stort fokus på det sociale liv
+      og godt kammeratskab, både på og uden for banen.
+    </p>
+  </div>
+  <div class="feature-item">
+    <h2>
+      <img src="assets/group.svg" width="30" height="30" alt="timeline" />
+      Badminton for alle
+    </h2>
+    <p>Vi tilbyder badminton for alle, i alle aldre og på alle niveauer.</p>
+  </div>
+  <div class="feature-item">
+    <h2>
+      <img src="assets/run.svg" width="30" height="30" alt="run" />
+      Uforpligtende prøvetræning
+    </h2>
+    <p>
+      Du er altid velkommen til at komme til en uforpligtende prøvetræning eller
+      to, bare tag kontakt og aftal nærmere.
+    </p>
+  </div>
 </div>
 
 <div class="top-hr">
-    <div class="hr">
-    </div>
+  <div class="hr"></div>
 </div>
-
 
 <!--Vores Sponsorer-->
 <section class="four-gray-body w-100">
-    <div class="md-grid conteiner pt-0  my-0 my-xl-4 my-lg-4">
-        <p class="h2 text-dark Telegraf-UltraBold mt-4 text-align-center text-start-xl text-start-lg">Vores Sponsorer</p>
-    </div>
+  <div class="md-grid conteiner my-xl-4 my-lg-4">
+    <p
+      class="h2 text-dark Telegraf-UltraBold mt-4 text-align-center text-start-xl text-start-lg"
+    >
+      Vores Sponsorer
+    </p>
+  </div>
 </section>
 
 <div class="top-hr">
-    <!-- <div class="feature-item" style="display: flex; justify-content: center; align-items: center;" class="py-6" onclick="window.location='https://aikographic.dk/';"> -->
-            <!-- <img src="assets/sponsor/Aiko_Graphic_Logo.png" alt="aiko graphic" height="125px" width="200px"/> -->
-    <!-- </div> -->
-    <div class="feature-item" style="display: flex; justify-content: center; align-items: center;" class="py-6" onclick="window.location='https://fjernvarmefyn.dk/';">
-        <img src="assets/sponsor/Fjernvarme_Fyn_Logo.svg" alt="fjernvarme fyn" height="125px" width="175px"/>
-    </div>
-    <!-- <div class="feature-item" style="display: flex; justify-content: center; align-items: center;" class="py-6" onclick="window.location='https://rsl.dk/';"> -->
-        <!-- <img src="assets/sponsor/RSL_Logo.jpg" alt="rsl" height="70px" width="140px"/> -->
-    <!-- </div> -->
+  <div
+    class="feature-item"
+    style="display: flex; justify-content: center; align-items: center"
+    class="py-6"
+    onclick="window.location='https://fjernvarmefyn.dk/';"
+  >
+    <img
+      src="assets/sponsor/Fjernvarme_Fyn_Logo.svg"
+      alt="fjernvarme fyn"
+      height="125px"
+      width="175px"
+    />
+  </div>
 </div>
 
-
-
-{% endblock %}
-
-{% block content %}{% endblock %}
-
-{% block footer %}
-
+{% endblock %} {% block content %}{% endblock %} {% block footer %}
 <!--Footer-->
 <footer class="bg-dark">
-    <div class="md-footer-meta md-typeset" style="margin-top: auto">
-        {% if config.extra.social %}
-            <center>
-            {% include "partials/social.html" %}
-            </center>
-        {% endif %}
-    </div>
+  <div class="md-footer-meta md-typeset" style="margin-top: auto">
+    {% if config.extra.social %}
+    <center>{% include "partials/social.html" %}</center>
+    {% endif %}
+  </div>
 </footer>
 
 <script type="text/javascript">
-    // document.addEventListener("DOMContentLoaded", function() {
-    // const location = [55.38676606319269, 10.371695146319285]
-    //   var map = L.map('leaflet-container').setView(location, 16);
-  
-    //   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    //     attribution: '',
-    //     maxZoom: 18,
-    //     id: 'mapbox/satellite-streets-v12',
-    //     tileSize: 512,
-    //     zoomOffset: -1,
-    //     accessToken: 'pk.eyJ1Ijoiem9uZTAiLCJhIjoiY2o5aWw3b2o5M2ppYzJ3cHlpNTVocWUwaiJ9.8xkONvRHgNd5SJaSC2rWRQ'
-    //   }).addTo(map);
-    //   L.CircleMarker([location[0], location[1]], {radius: 10, color: 'FF0000'}).addTo(map);
-    // })
-  </script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var location = [55.38684450961054, 10.371792944120916];
+    var map = L.map("leaflet-container", { zoomControl: false }).setView(
+      location,
+      16
+    );
+
+    L.tileLayer(
+      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
+      {
+        reuseTiles: true,
+        unloadInvisibleTiles: true,
+        zoomOffset: -1,
+        attribution: "",
+        maxZoom: 18,
+        id: "mapbox/satellite-streets-v12",
+        tileSize: 512,
+        accessToken:
+          "pk.eyJ1Ijoiem9uZTAiLCJhIjoiY2o5aWw3b2o5M2ppYzJ3cHlpNTVocWUwaiJ9.8xkONvRHgNd5SJaSC2rWRQ",
+      }
+    ).addTo(map);
+    var iconOptions = {
+      iconUrl: "assets/marker.svg",
+      iconSize: [48, 48],
+      iconAnchor: [0, 60],
+    };
+    var customIcon = L.icon(iconOptions);
+    var markerOptions = {
+      icon: customIcon,
+      alt: "Hunderupskolen",
+    };
+    var marker = L.marker(location, markerOptions)
+      .addTo(map)
+      .bindPopup(
+        "Badminton i hjertet af Odense.<br>Hunderupskolen.<br>Solfaldsvej 11, Odense C."
+      );
+    //   .openPopup();
+  });
+</script>
 {% endblock %}

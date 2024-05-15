@@ -1,7 +1,7 @@
 ## Project information
 site_name: BK77
 site_url: https://bk77.dk/
-site_description: BK77 - Badminton i hjertet af Odense
+site_description: BK77 - Badminton i hjertet af Odense. Vi er en central badmintonklub i Odense med fokus på både sport og sammenhold. Vi tilbyder badminton for alle niveauer og aldre i ungdom, senior og motionsafdelinger. Kom og oplev badmintonstemningen i Hunderupskolens sportshal (Solfaldsvej 11, 5000 Odense).
 
 ## Social Media
 extra:
@@ -32,7 +32,7 @@ theme:
   include_search_page: false
   search_index_only: true
   # Default values, taken from mkdocs_theme.yml
-  language: en
+  language: da
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -43,8 +43,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  icon:  # from .icons path. Add to theme override for custom logo.
-    logo: shuttle  # top left header logo
+  icon: # from .icons path. Add to theme override for custom logo.
+    logo: shuttle # top left header logo
   favicon: assets/shuttle.ico #browser tab logo
 
 ## Plugins
@@ -61,7 +61,6 @@ extra_javascript:
 
 extra_css:
   - css/leaflet.css
-
 ## Extensions
 # markdown_extensions:
 #   - markdown.extensions.admonition
