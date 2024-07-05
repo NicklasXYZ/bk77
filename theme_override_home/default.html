@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block footer %}
+<style>
+
+    .md-footer-meta__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 1.0rem;
+    }
+
+    .bg-dark {
+        background-color: #181917;
+    }
+</style>
+
+<!--Footer-->
+<footer class="bg-dark">
+    <div class="md-footer-meta md-typeset" style="margin-top: auto">
+        {% if config.extra.social %}
+            <center>
+            {% include "partials/social.html" %}
+            </center>
+        {% endif %}
+    </div>
+</footer>
+
+{% endblock %}
