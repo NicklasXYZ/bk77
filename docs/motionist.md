@@ -22,8 +22,8 @@ Da klubben holder til i en kommunal hal, kan vi indimellem blive ramt af aflysni
 
     | Ugedag | Tidspunkt                       |
     | :----: | :------------------------------ |
-    | Onsdag | 16.10 - 17.00 <br>17.10 - 18.00 |
-    | Fredag | 18.00 - 18.50                   |
+    | Onsdag | 17.10 - 18.00                   |
+    | Fredag | 18.10 - 19.00 <br>19.00 - 19.50 |
 
     </center>
 
