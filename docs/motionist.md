@@ -22,13 +22,15 @@ Da klubben holder til i en kommunal hal, kan vi indimellem blive ramt af aflysni
 
     | Ugedag | Tidspunkt                       |
     | :----: | :------------------------------ |
-    | Onsdag | 17.10 - 18.00                   |
-    | Fredag | 18.10 - 19.00 <br>19.00 - 19.50 |
+    | Onsdag | 17.10 - 18.10                   |
+    | Fredag | 18.10 - 19.00                   |
 
     </center>
 
 === "Kontingent"
 
-    <div>
-        <script type="text/javascript" src="https://www.conventus.dk/dataudv/www/holdoversigt4.php?foreningsid=3265&afdelingsid=13023&handelsbetingelser=1&reservationer=vis&skjul_nyt_medlem=0&skjul_allerede_medlem=0&kolone1_width=50&kolone2_width=50&min_height=250"></script>
-    </div>
+    Betales på: <a href="https://bk77.zakobo.dk">https://bk77.zakobo.dk/</a> (oprettelse af bruger er krævet).
+
+    <!-- <div> -->
+        <!-- <script type="text/javascript" src="https://www.conventus.dk/dataudv/www/holdoversigt4.php?foreningsid=3265&afdelingsid=13023&handelsbetingelser=1&reservationer=vis&skjul_nyt_medlem=0&skjul_allerede_medlem=0&kolone1_width=50&kolone2_width=50&min_height=250"></script> -->
+    <!-- </div> -->

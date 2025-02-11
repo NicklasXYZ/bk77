@@ -22,6 +22,8 @@ I BK77 har vi en livlig senior afdeling, med stort fællesskab og en god sports�
 
 === "Kontingent"
 
-    <div>
-        <script type="text/javascript" src="https://www.conventus.dk/dataudv/www/holdoversigt4.php?foreningsid=3265&afdelingsid=12121&handelsbetingelser=1&reservationer=vis&skjul_nyt_medlem=0&skjul_allerede_medlem=0&kolone1_width=50&kolone2_width=50&min_height=250"></script>
-    </div>
+    Betales på: <a href="https://bk77.zakobo.dk">https://bk77.zakobo.dk/</a> (oprettelse af bruger er krævet).
+
+    <!-- <div> -->
+        <!-- <script type="text/javascript" src="https://www.conventus.dk/dataudv/www/holdoversigt4.php?foreningsid=3265&afdelingsid=12121&handelsbetingelser=1&reservationer=vis&skjul_nyt_medlem=0&skjul_allerede_medlem=0&kolone1_width=50&kolone2_width=50&min_height=250"></script> -->
+    <!-- </div> -->
